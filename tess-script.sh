@@ -27,8 +27,6 @@ echo " "
 #### ------------------mjc: 05022013----------------------------------------------------
 # The script takes an input file name (without an extension, so something like "emop.mfle.exp18") and running all the necessary commands to build the training files.
 
-# For now (5/2/13) this only works on one file input at a time.
-
 # 
 
 # The command looks like this:
@@ -38,6 +36,8 @@ echo " "
 
 # Where:
 #		<inputfile(s)>: input file(s) with path  --(relative from the folder where your XSLT is running)
+#		NOTE: the input file is the common prefix of the name of a set of tiff/box file pairs. i.e. leave off the .tif/.box
+
 #### ------------------mjc: 050213----------------------------------------------------
 
 
@@ -147,4 +147,4 @@ echo "#####################################"
 
 cp emop.traineddata /Users/matthewchristy/tesseract-ocr/tessdata
 
-#tesseract emop.mfle.exp17.tif out.a4.m94-17.mfle17 -l emop
+#tesseract emop.mfle.exp17.tif out.a4.m94-17.mfle17 -l emop <path>config.txt
