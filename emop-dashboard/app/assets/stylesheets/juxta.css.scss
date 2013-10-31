@@ -1,0 +1,41 @@
+// Place all the styles related to the Juxta controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*
+ * Override juxta-ws styles
+ */
+#connections-div {
+   outline: 0 !important;
+}
+.sbs-witness {
+   border: 1px solid #888 !important;
+   border-radius: 5px !important;
+   -mox-border-radius: 5px !important;
+   -webkit-border-radius: 5px !important;
+}
+.header {
+   background-color: #ccc;
+   border-bottom: 1px solid #888;
+   font-weight: 500;
+   padding: 2px 5px;
+   color: #555;
+}
+
+#page-scroller {
+   padding: 10px;
+}
+.witness-text {
+   cursor: default !important;
+}
+
+/*
+ * Remainder of juxta / emop dashboard styles
+ */
+#back-bar {
+   margin: 15px 0 5px 0;
+   a.results-back {
+      margin: 10px;
+      font-size: .85em;
+   }
+}

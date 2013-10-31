@@ -1,0 +1,21 @@
+<div id="queue-status">
+   <div id="status-header">Job Queue</div>
+   <table id="summary-table">
+      <tr>
+         <td class="summary-label">Scheduled:</td>
+         <td><span id="pending-jobs"><%= @queue_status[:pending] %></span></td>
+      </tr>
+      <tr>
+         <td class="summary-label">In-Progress:</td>
+         <td><span id="running-jobs"><%= @queue_status[:running] %></span></td>
+      </tr>
+      <tr>
+         <td class="summary-label">Await Postprocess:</td>
+         <td><span id="postprocess-jobs"><%= @queue_status[:postprocess] %></span></td>
+      </tr>
+      <tr>
+         <td class="summary-label">Failed:</td>
+         <td><span id="failed-jobs"><%= @queue_status[:failed] %></span></td>
+      </tr>
+   </table>
+</div>

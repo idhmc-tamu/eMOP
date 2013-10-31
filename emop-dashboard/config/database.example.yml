@@ -1,0 +1,28 @@
+
+emop:
+  adapter: mysql2
+  database: emop
+  username: root
+  password: 
+  host: localhost
+  encoding: utf8
+  pool: 5
+  timeout: 5000
+
+development:
+  adapter: mysql2
+  database: dashboard_dev
+  username: root
+  password: 
+
+test:
+  adapter: mysql2
+  database: dashboard_dev
+  username: root
+  password: 
+
+production:
+  adapter: mysql2
+  database: dashboard_prod
+  username: root
+  password: 

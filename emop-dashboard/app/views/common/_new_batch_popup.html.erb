@@ -1,0 +1,29 @@
+<div id="new-batch-popup" class="emop-popup" title="Create Batch">
+   <p id="new-batch-error">Batch name is required</p>
+   <table>
+      <tr><td class="table-label">Name:</td><td class="table-input"><input type="text" id="new-name"/></td></tr>
+      <tr>
+         <td class="table-label">Batch Type:</td>
+         <td class="table-input"><%= select_tag "new-type", options_from_collection_for_select(@job_types, "id", "name",2) %></td>
+      </tr>
+      <tr class="engine-row">
+         <td class="table-label">OCR Engine:</td>
+         <td class="table-input"><%= select_tag "new-ocr", options_from_collection_for_select(@engines, "id", "name") %></td>
+      </tr>
+      <tr class="font-row">
+         <td class="table-label">Font Training Library:</td>
+         <td class="table-input">
+            <div id="fonts-div">
+               <%= select_tag "new-font", options_from_collection_for_select(@fonts, "id", "font_name") %>
+               <span id="no-fonts" style="display:none">No fonts defined</span>
+               <input id="upload-font" type="button" value="New" />
+            </div>
+         </td>
+      </tr>
+      
+      <tr><td class="table-label">Parameters:</td><td><input type="text" id="new-params"/></td></tr>
+      <tr><td class="table-label" style="vertical-align: text-top;">Notes:</td><td><textarea id="new-notes"></textarea></td></tr>
+   </table>   
+   <span id="batch-json" style="display: none"></span>
+   
+</div>

@@ -1,0 +1,14 @@
+<div id="set-font-popup" class="emop-popup" title="Set Print Font">
+   <div id="sel-pf-div">
+      <select id="new-print-font" name="new-print-font">
+         <option value>None</option>
+         <% @print_fonts.each do | font | %>
+            <option value="<%= font[:pf_id] %>"><%= font[:pf_name] %></option>
+         <% end %>
+      </select>
+      <input id="create-print-font" type="button" value="New"/>
+   </div>
+   <input id="new-font-name" type="text" style="display:none"/>
+
+   <span id="font-work-id-list" style="display: none"></span>
+</div>

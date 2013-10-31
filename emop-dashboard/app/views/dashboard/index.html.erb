@@ -1,0 +1,37 @@
+<div id="dashboard-main">
+   <div id="dashboard-detail">
+      <%= render :partial => 'filter' %>
+      <%= render :partial => 'queue_status' %>
+      <div style="clear: both"></div>
+      
+      <div id="table-div">
+         <input type="button" id="select-all" value="Select All" />
+         <input type="button" id="schedule-selected" value="Schedule Selected" />
+         <input type="button" id="font-all" value="Set Print Font for Selected Works" />
+         <table id="detail-table">
+            <thead>
+               <tr>
+                  <th class="check-col"></th>
+                  <th class="icon-col"></th>
+                  <th class="icon-col"></th>
+                  <th class="narrow-col">Data Set</th>
+                  <th class="icon-col">ID</th>
+                  <th class="medium-col">TCP Number</th>
+                  <th class="title-col">Title</th>
+                  <th class="author-col">Author</th>
+                  <th class="medium-col">Font</th>
+                  <th class="date-col">OCR Date</th>               
+                  <th class="medium-col">OCR Engine</th>
+                  <th class="author-col">OCR Batch</th>
+                  <th class="result-col">Juxta</th>
+                  <th class="result-col">RETAS</th>
+               </tr>
+            </thead>
+            <tbody>
+            </tbody>
+         </table>
+      </div>
+   </div>
+</div>
+
+<%= render :partial => 'work_errors_popup' %>

@@ -1,0 +1,262 @@
+
+@mixin rounded-corners {
+  border-radius:  4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+}
+
+@mixin box-shadow {
+  -moz-box-shadow: 4px 4px 4px #999;
+  -webkit-box-shadow: 4px 4px 4px #999;
+  box-shadow: 4px 4px 4px #999;
+}
+
+.dataTables_processing {
+   border: none;
+   color: black;
+   box-shadow: 3px 3px 15px 5px #555;
+   background-color: #eee;
+   outline: 0;
+   top: 425px !important;
+   position: fixed;
+   border-radius: 5px;
+   font-weight: bold;
+}
+
+.small-label {
+   font-size: 0.8em;
+   vertical-align: sub;
+}
+
+.main-header {
+   background-color: #500000;
+   width:100%;
+   height: 155px;
+   border-bottom: 1px solid;
+   margin-top: 2px;
+   border-top: 1px solid;
+   
+   #idhmc-logo {
+      float:left;
+   }
+   
+   span {
+      color: white;
+      font-size: 2.5em;
+      position: relative;
+      top: 50px;
+      left: 40px;
+      font-weight: bolder;
+   }
+}
+
+.ui-dialog {
+   box-shadow: 6px 6px 16px #999;
+}
+
+.title-col {
+   min-width: 200px;
+}
+.narrow-col {
+   width: 30px;
+}
+.medium-col {
+   width: 55px;
+}
+.author-col {
+   width: 160px;
+}
+.date-col {
+   width: 80px;
+}
+.result-col {
+   width: 45px;
+}
+.result-data {
+   text-align: center;
+}
+.icon-col {
+   width: 12px;
+}
+.check-col {
+   width: 12px !important;
+}
+.detail-link {
+   height:16px;
+   width:16px;
+   background-image: image-url("detail.png");
+   background-repeat: no-repeat;
+   background-position: 0 0;
+   cursor: pointer;
+}
+.detail-link.disabled {
+   height:16px;
+   width:16px;
+   background-image: image-url("detail.png");
+   background-repeat: no-repeat;
+   background-position: 0 -16px;
+   cursor: default;
+}
+.status-icon {
+   height:16px;
+   width:16px;
+   background-image: image-url("status.png");
+   background-repeat: no-repeat;
+   background-position: 0 0;
+   cursor: default;
+}
+.status-icon.error {
+   background-position: 0 -32px;
+   cursor: pointer;
+}
+.status-icon.idle {
+   background-position: 0 0px;
+}
+.status-icon.success {
+   background-position: 0 -16px;
+}
+.status-icon.scheduled {
+   background-position: 0 -48px;
+}
+
+
+
+#dim-overlay {
+   z-index: 1000;
+   cursor: wait;
+   display: none;
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   background-color: rgba(128, 128, 128, 0.5);
+   top: 0%;
+   left: 0%;
+}
+
+#wait-popup {
+   display: none;
+   text-align: center;
+   width: 200px;
+   height: auto;
+   background-color: white;
+   position: fixed;
+   top: 40%;
+   left: 50%;
+   margin-left: -100px;
+   z-index: 1001;
+   box-shadow: 0 0 40px 10px #666;
+   -webkit-box-shadow: 0 0 40px 10px #666;
+   -moz-box-shadow: 0 0 40px 10px #666;
+   border: 3px solid #555;
+   border-radius: 10px;
+   -moz-border-radius: 10px;
+   -webkit-border-radius:  10px;
+   font-size: 0.85em;
+   font-weight: 200;
+   #wait-msg {
+      margin-left: 10px;
+      margin-right: 10px;
+   }
+   #wait-spinner {
+      margin-top: 15px;
+   }
+}
+
+// popups
+.ui-dialog-titlebar {
+   font-size: 0.8em;
+   font-weight: 400;
+   padding: 2px 0 2px 8px !important;
+}
+.ui-button-text {
+   font-size: 0.7em !important;
+}
+.ui-dialog-buttonpane {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+#new-batch-popup .font-info {
+   margin-left: 118px;
+   margin-bottom: 10px;
+}
+#set-font-popup {
+   #new-print-font{
+      width: 173px;
+   }
+   #create-print-font {
+      width:auto;
+   }
+   #new-font-name {
+      width: 215px;
+   }
+}
+.emop-popup {
+   #font-name {
+      width: 260px;
+      margin: 10px 0;
+      font-size: 0.85em;
+   }
+   label {
+      font-size: 0.9em;
+   }
+   
+   #new-batch-error {
+      margin: 2px;
+      text-align: center;
+      font-style: italic;
+      color: #d22;
+      font-weight: bold;
+      display: none;
+   }
+   #fonts-div {
+      #new-font {
+         width: 200px;
+         float: left;
+      }
+      #upload-font {
+         width: auto;
+         float: right;
+      }
+   }
+   
+   font-size: 0.8em;
+   input {
+      font-size: 0.9em;
+      width:248px;
+   }   
+   select {
+      width: 100%;
+   } 
+   textarea {
+      resize: none;
+      width:248px;
+      height: 55px;
+      font-size: 0.85em;
+   }
+   .table-input {
+      width: 250px;
+   }
+   .table-label {
+      text-align: right;
+      font-weight: 300;
+      width: 90px;
+      font-size: 0.9em;
+      padding-right: 5px;
+   }
+   .table-data {
+      font-size: 0.85em;
+   }
+  
+   .font-info {
+      font-size: 0.75em;
+      margin-left: 100px;
+      p {
+         margin:0
+      }
+      .font-data {
+         margin-left: 5px;
+      }
+   }
+
+}

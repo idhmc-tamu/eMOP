@@ -1,0 +1,45 @@
+
+<span id="work-id" style="display:none"><%= @work_id %></span>
+<span id="batch-id" style="display:none"><%= @batch_id %></span>
+
+<div id="results-summary">
+   <table id="results-summary">
+      <tr><td class="summary-label">Work:</td><td><%= @work_title %></td></tr>
+      <tr><td class="summary-label">Batch:</td><td><%= @batch %></td></tr>    
+      <tr><td class="summary-label">Print Font:</td><td><span id="work-print-font"><%= @print_font %></span></td></tr>     
+   </table>
+</div>
+
+<div id="results-detail">
+   
+   <div>
+   <a class="dashboard-back" href="/"><< Back To Dashboard</a>
+   </div>
+   <div style="margin: 10px;">
+   <input type="button" id="select-all-pages" value="Select All" />
+   <input type="button" id="schedule-pages" value="Schedule Selected" />
+   <input type="button" id="set-work-font" value="Set Print Font for Work" />
+   </div>
+   
+   <table id="pages-table">
+      <thead>
+         <tr>
+            <th class="check-col"></th>
+            <th class="icon-col"></th>
+            <th class="icon-col"></th>
+            <th class="icon-col"></th>
+            <th class="icon-col"></th>
+            <th class="icon-col"></th>
+            <th class="result-col">Page Number</th>
+            <th class="result-col">Juxta</th>
+            <th class="result-col">RETAS</th>
+         </tr>
+      </thead>
+      <tbody>
+      </tbody>
+   </table>
+   
+   <a  class="dashboard-back"  href="/"><< Back To Dashboard</a>
+   <%= render :partial => 'txt_viewer_popup' %>
+   <%= render :partial => 'error_popup' %>
+</div>

@@ -1,0 +1,246 @@
+// Place all the styles related to the Dashboard controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "common";
+
+#dashboard-main {
+   margin-top: 2px;
+   border-top: 1px solid;
+   padding-top:5px;
+   padding-bottom:5px;
+}
+
+#ocr-summary {
+   margin: 10px;
+   border: 1px solid;
+   border-collapse: collapse;
+}
+
+#work-error-messages {
+   margin: 10px 0 15px 10px;
+   .err-page {
+      font-weight: bold;
+      font-size: 0.9em;
+      margin-right: 10px;
+   }
+   .err-msg {
+      font-size: 0.9em;
+   }
+}
+
+#detail-table_paginate {
+  margin-bottom:20px;
+}
+
+#filter-table {
+   font-size: 0.85em;
+   margin-bottom: 15px;
+   
+   .filter-label {
+      text-align: right;
+   }
+   
+   span {
+      margin-right: 5px;
+   }
+   
+   #filter-ctls {
+      text-align: right;
+   }
+}
+
+a.paginate_disabled_previous {
+   cursor: default !important;
+}
+.paginate_disabled_next {
+   cursor: default !important;
+}
+
+#batch-tooltip {
+   display:none;
+   position: fixed;
+   background-color: #f8f8f8;
+   border: 1px solid;
+   margin: 0px;
+   padding: 8px 10px;
+   font-size: 0.7em;
+   font-weight: 200;
+   @include rounded-corners;
+   @include box-shadow;
+   max-width: 240px;
+   min-width: 180px;
+   
+   p {
+      margin: 2px 0px;
+   }
+   .tt-label {
+      font-weight: 500;
+      margin-right: 5px;
+      text-align: right;
+   }
+   #font-info {
+      margin-left:15px;
+      font-size: 0.9em;
+   }
+}
+
+#set-font-popup {
+   min-height: 30px !important;
+}
+      
+#dashboard-detail {
+   padding:10px;
+   
+   #queue-status {
+      font-size: 0.95em;
+      
+      #status-header {
+         font-weight: 500;
+      }
+      
+      float: right;
+      #summary-table {
+         font-size: 0.9em;
+         font-weight: 200;
+         width: 200px;
+         margin-bottom: 6px;
+      }
+      
+      #schedule-selected, #schedule-all {
+        float: right;   
+      }
+   }
+   
+   #dashboard-filter {
+      margin: 0px 0px 20px 5px;
+      float: left;
+      border: 1px solid #aaa;
+      padding: 5px 0 5px 8px;
+      background-color: #ededed;
+      
+      #filter-left {
+         float: left;
+      }
+      #filter-right {
+         float: right;
+         margin-left: 20px;
+      }
+   
+      .cb-filter-label {
+         font-size: 0.85em;
+         margin-left: 10px;
+      }
+      
+      .filter-label {
+         margin-right: 5px;
+         font-size: 0.8em;
+         font-weight: 400;
+      }
+      
+      #filter-header {
+         font-size:0.95em;
+         font-weight: 500;
+      }
+      
+      p {
+         margin: 5px 10px;
+      }
+      
+      select {
+         width: 207px;
+      }
+      
+      .date-filter{ 
+         width: 75px;
+         margin-right: 15px;
+      }
+      .date-filter.to {
+         margin-right: 3px;
+      }
+      #filter-reset {
+         position: relative;
+         left: 190px;
+         top: 3px;
+      }
+      #print-font-filter {
+         width: 182px;
+      }
+   }
+   #table-div {
+      position: relative;
+      top: -32px;
+      #detail-table {
+         font-size: 0.75em;
+         border-spacing: 1px;
+         background-color: #999;
+   
+         .gale-row {
+            background-color: #cec !important;
+         }      
+      
+         td {
+            cursor: default;
+         }
+         .batch-name {
+            cursor: help;
+         }
+    
+         th {
+            background-color: #679;
+            color: #ededed;
+            border:none;
+            text-align: center;
+            font-weight: normal;
+         }
+         
+         .bad-cell {
+            background-color: #900;
+            color: #ffcece;
+         }
+         
+         .warn-cell {
+            background-color: #dd0;
+         }
+      }
+      #select-all {
+         position:relative;
+         top:22px;
+         z-index: 1000;
+         width: 80px;
+      }
+      #schedule-selected {
+         position:relative;
+         top:22px;
+         z-index: 1000;
+      }
+      #font-all {
+         position:relative;
+         top:22px;
+         z-index: 1000;
+      }
+      #detail-table_length {
+        margin-left: 10px;
+        float: right;
+      }
+      .dataTables_length {
+         font-size: 0.8em;
+      }
+      
+      .dataTables_filter {
+         margin-bottom: 10px;
+         font-size: 0.8em;
+      }
+      .paging_full_numbers {
+         font-size: 0.8em;
+      }
+      
+      .dataTables_info {
+         margin-top: 10px;
+         font-size: 0.8em;
+      }
+      .dataTables_paginate {
+         margin-top: 10px;
+      }
+   }
+}

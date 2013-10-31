@@ -1,0 +1,27 @@
+<span id="collation-id" style="display: none"><%= @collation_id %></span>
+<span id="collation-status" style="display: none"><%= @collation_status %></span>
+<span id="work-id" style="display: none"><%= @work_id %></span>
+<span id="batch-id" style="display: none"><%= @batch_id %></span>
+
+
+<div id="results-summary">
+   <table id="results-summary">
+      <tr><td class="summary-label">Work:</td><td><%= @work_title %></td></tr>
+      <tr><td class="summary-label">Batch:</td><td><%= @batch %></td></tr>   
+      <tr><td class="summary-label">Page Number:</td><td><%= @page_num %></td></tr>   
+   </table>
+</div>
+
+<div id="back-bar">
+   <a class="results-back"  href="/results?work=<%= @work_id %>&batch=<%= @batch_id %>"><< Back To Page Results</a>
+</div>
+
+<% if @error == true %>
+    <div id="juxta-error">
+       <%= @juxta_error_message %>
+    </div>
+<% else %>
+   <div id="page-scroller" class="scroller"> 
+      <%= raw(@content) %>
+   </div>
+<% end %>

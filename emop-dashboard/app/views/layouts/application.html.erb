@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>EmopDashboard</title>
+      <%= stylesheet_link_tag    "application", :media => "all" %>
+      <%= javascript_include_tag "application" %>
+      <%= csrf_meta_tags %>
+
+      <!-- JUXTA WS integration -->
+      <link href="<%= Settings.juxta_ws_url %>/stylesheets/sidebyside.css" rel="stylesheet" type="text/css">
+      <script type="text/javascript" src="<%= Settings.juxta_ws_url %>/javascripts/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="<%= Settings.juxta_ws_url %>/javascripts/juxta-ws-common.js"></script>
+      <script type="text/javascript" src="<%= Settings.juxta_ws_url %>/javascripts/raphael-min.js"></script>
+      <script type="text/javascript" src="<%= Settings.juxta_ws_url %>/javascripts/sidebyside.js"></script>
+
+   </head>
+   <body>
+
+      <div class="main-header">
+         <%= image_tag("idhmc.png", :id=>"idhmc-logo") %>
+         <span>eMOP Dashboard</span>
+         <div style="clear: both"></div>
+      </div>
+
+      <%= yield %>
+      
+      <span id="types-json" style="display: none"><%= ActiveSupport::JSON.encode( @job_types ) %></span>
+      <span id="engines-json" style="display: none"><%= ActiveSupport::JSON.encode( @engines ) %></span>
+      <span id="batches-json" style="display: none"><%= ActiveSupport::JSON.encode( @batches ) %></span>
+
+      <%= render :partial => '/common/resubmit_confirm_popup' %>
+      <%= render :partial => '/common/new_batch_popup' %>
+      <%= render :partial => '/common/new_font_popup' %>
+      <%= render :partial => '/common/set_font_popup' %>
+      <%= render :partial => '/common/wait_popup' %>
+   </body>
+</html>
